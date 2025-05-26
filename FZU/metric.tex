@@ -1,0 +1,75 @@
+\subsection{聚类评价指标}\label{clustering_metrics}
+为了衡量聚类算法的优劣，四种主流的评价指标被使用，包括：准确率 (Accuracy, ACC)，
+%纯度(Purity)，归一化互信息 (Normalized Mutual Information, NMI)，查准率 (Precision)，
+调整的兰德系数 (Adjusted Rand Index, ARI)，F值 (F-score)和查全率 (Recall)。上述指标中，除了ARI的值在[-1,1]之间，其他指标值均在[0,1]之间，且所有指标的值越大，表示聚类效果越好。接下来，将详细介绍各个指标值的计算公式。
+
+假设$T_i$和$P_i$分别表示第$i$个样本的真实标签和预测标签。则ACC，即正确聚类的样本比例，定义如下：
+\begin{align}\label{ACC}
+	\operatorname{ACC} = \frac{\sum_{i=1}^N\phi(T_i, \operatorname{map}(P_i))}{N},
+\end{align}
+其中，map($\cdot$)是一个函数，表示重新分配聚类标签。$\phi(\cdot,\cdot)$表示一个判别函数，定义如下：
+\begin{align}\label{phi}
+	\phi(x,y) = \left\{
+	\begin{aligned}
+		&1, \text{当} x=y \text{时},& \\
+		&0, \text{其他情况。}&
+	\end{aligned}
+	\right.
+\end{align}
+
+%Purity计算每个簇中主要类别的样本数量占总样本数量的比例，其计算公式如下：
+%\begin{align}\label{Purity}
+%	\operatorname{Purity} = \frac{1}{N}\sum_{i}\operatorname{max}_{j}|Q_i\cap R_j|,
+%\end{align}
+%其中，$Q_i$表示第$i$个簇的样本集合，$Q=\{Q_1, \cdots, Q_c\}$ 是聚类簇的划分，$R_j$表示第$j$个真实类别的样本集合，$R=\{R_1, \cdots, R_{\hat{c}}\}$ 是真实类别的划分，$\hat{c}$是真实的类别数量。
+
+%NMI计算聚类结果和真实标签的密切程度，定义如下：
+%\begin{align}\label{NMI}
+%	\operatorname{NMI}(Q, R) =\frac{I(Q; R)}{\sqrt{H(Q)\cdot H(R)}},
+%\end{align}
+%其中$I(\cdot;\cdot)$表示互信息，$H(\cdot)$为熵函数。
+
+
+ARI用于衡量两个簇之间的相似性：
+\begin{align}\label{ARI}
+	\operatorname{ARI} = \frac{A-\frac{BC}{n(n-1)/2}}{1/2(B+C)-\frac{BC}{n(n-1)/2}},
+\end{align}
+其中$A=\sum_{i,j}\frac{D_{ij}(D_{ij}-1)}{2}$，$B=\sum_{i}\frac{D_{i}(D_{i}-1)}{2}$ ，$C=\sum_{j}\frac{D_{j}(D_{j}-1)}{2}$。此外，$D_{ij}$ 是应该被归为第 $i$ 类但实际上被分到第 $j$ 类中的样本数量。$D_{i}$ 和 $D_{j}$ 分别表示属于第 $i$ 类和第 $j$ 类的样本数量。
+
+假设 TP 是同类样本分在同一簇的数据量，FP 是非同类样本分在同一簇的数据量，TN是非同类样本分在不同簇的数量，FN 是同类样本分类不同簇的数量。那么，Recall可通过以下公式计算：
+\begin{align}\label{Recall}
+	\operatorname{Recall} = \frac{\operatorname{TP}}{\operatorname{FP}+\operatorname{FN}}.
+\end{align}
+
+查准率Precision定义如下：
+\begin{align}\label{Precision}
+	\operatorname{Precision} = \frac{\operatorname{TP}}{\operatorname{TP}+\operatorname{FP}}.
+\end{align}
+
+F-score基于Recall和Precision得到，它的计算公式如下：
+\begin{align}\label{F-score}
+	\operatorname{F-score} = 2 \frac{\operatorname{Precision\cdot \operatorname{Recall}}}{\operatorname{Precision} + \operatorname{Recall}}.
+\end{align}
+
+\subsection{分类评价指标}\label{classification_metrics}
+在分类任务中，使用两个常用的指标 ACC 和 macro-F1 (F1)来评估模型的分类性能，它们分别由以下公式\eqref{classification_ACC}和\eqref{macro-F1}计算得出。
+与聚类中使用的ACC不同，分类任务中计算ACC时不需要转换类别标签，可直接计算分类正确的样本数占总样本数的比例。
+
+对于一个多类别分类器，它会为每个样本进行预测，然后生成一个 $c \times c$ 的混淆矩阵  $\mathbf{M}$，它的每一行和每一列分别表示“真实”和“预测”的类别标签。$\mathbf{M}_{i,j}$ 表示第 $i$ 个真实类别被识别为第 $j$ 个预测类别的样本数量。那么ACC被定义为：
+\begin{align}\label{classification_ACC}
+	\operatorname{ACC} = \frac{\sum_{k=1}^c{\mathbf{M}_{k,k}}}{\sum_{i=1}^c{\sum_{j=1}^c{\mathbf{M}_{i,j}}}}.
+\end{align}
+
+F1，即macro-F1，是通过对所有类别的micro-F1平均计算得到：
+\begin{align}\label{macro-F1}
+	\operatorname{F1} = \frac{\sum_{k=1}^c \operatorname{micro-F1}_k}{c}.
+\end{align}
+micro-F1$_k$ 表示第 $k$ 个类别的micro-F1，其计算公式如下：
+\begin{align}\label{micro-F1}
+	\operatorname{micro-F1}_k = \frac{2\times\operatorname{Precision}_k\times\operatorname{Recall}_k}{\operatorname{Precision}_k + \operatorname{Recall}_k},
+\end{align}
+其中,
+\begin{align}\label{precision_k}
+	\operatorname{Precision}_k = \frac{\mathbf{M}_{k,k}}{\sum_{i=1}^c{\mathbf{M}_{i,k}}},
+	\operatorname{Recall}_k = \frac{\mathbf{M}_{k,k}}{\sum_{j=1}^c{\mathbf{M}_{k,j}}}.
+\end{align}

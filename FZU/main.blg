@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: thesis.bst
+Database file #1: reference.bib
+Warning--entry type for "kullback1997information" isn't style-file defined
+--line 160 of file reference.bib
+Repeated entry---line 699 of file reference.bib
+ : @inproceedings{gcn2017
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 717 of file reference.bib
+ : @inproceedings{tsGCN
+ :                     ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ElisofHT21"
+Warning--I didn't find a database entry for "luan2022reciting"
+Warning--I didn't find a database entry for "zhu2020beyond，liao2024ld2，li2024pc"
+Warning--I didn't find a database entry for "eswarecomend23，Zhang0LWM21，AAAIWYYZ23"
+Warning--I didn't find a database entry for "eswassocialnetwork22，LaiCW20"
+Warning--I didn't find a database entry for "eswaMuSYZ23，eswaZhaoWLYZ23，LiuY0D22"
+Warning--I didn't find a database entry for "eswaGhafarian23，eswaHalderHAA23"
+Warning--I didn't find a database entry for "yang2015multi，RajB22"
+Warning--I didn't find a database entry for "KeeCR18，QuanYLCLHHLW21"
+Warning--I didn't find a database entry for "-"
+Warning--I didn't find a database entry for "GaoYZWPH18，hu2020graph"
+You've used 17 entries,
+            941 wiz_defined-function locations,
+            379 strings with 5665 characters,
+and the built_in function-call counts, 5014 in all, are:
+= -- 354
+> -- 232
+< -- 0
++ -- 139
+- -- 62
+* -- 403
+:= -- 716
+add.period$ -- 0
+call.type$ -- 17
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 252
+empty$ -- 338
+format.name$ -- 78
+if$ -- 960
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 114
+newline$ -- 20
+num.names$ -- 16
+pop$ -- 111
+preamble$ -- 0
+purify$ -- 0
+quote$ -- 0
+skip$ -- 89
+stack$ -- 0
+substring$ -- 717
+swap$ -- 124
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 80
+width$ -- 0
+write$ -- 160
+(There were 2 error messages)

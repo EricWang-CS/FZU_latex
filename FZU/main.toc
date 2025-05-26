@@ -1,0 +1,23 @@
+ \cftsetpnumwidth {\widthof {1}-1pt} 
+ \cftsetpnumwidth {\widthof {I}-1pt} 
+\contentsline {chapter}{摘要}{I}{chapter*.1}%
+ \cftsetpnumwidth {\widthof {II}-1pt} 
+ \cftsetpnumwidth {\widthof {III}-1pt} 
+\contentsline {chapter}{Abstract}{III}{chapter*.2}%
+ \cftsetpnumwidth {\widthof {IV}-1pt} 
+ \cftsetpnumwidth {\widthof {V}-1pt} 
+ \cftsetpnumwidth {\widthof {1}-1pt} 
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {第一章}绪论}{1}{chapter.1}%
+ \cftsetpnumwidth {\widthof {2}-1pt} 
+\contentsline {chapter}{\numberline {第二章}相关定义与工作}{2}{chapter.2}%
+ \cftsetpnumwidth {\widthof {3}-1pt} 
+\contentsline {chapter}{\numberline {第三章}第三章}{3}{chapter.3}%
+ \cftsetpnumwidth {\widthof {4}-1pt} 
+\contentsline {chapter}{\numberline {第四章}第四章}{4}{chapter.4}%
+ \cftsetpnumwidth {\widthof {5}-1pt} 
+\contentsline {chapter}{\numberline {第五章}第五章}{5}{chapter.5}%
+ \cftsetpnumwidth {\widthof {6}-1pt} 
+\contentsline {chapter}{\numberline {总结与展望}}{6}{chapter.6}%
+\contentsline {section}{\numberline {6.1}全文总结}{6}{section.6.1}%
+\contentsline {section}{\numberline {6.2}后续工作展望}{6}{section.6.2}%

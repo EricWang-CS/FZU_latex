@@ -1,0 +1,150 @@
+% !TeX document-id = {e2d5d229-2be4-4fd9-b208-1188e0212a37}
+\documentclass[master]{thesis}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm,amsmath}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{subcaption}
+%\usepackage{algorithm}%
+%\usepackage{algorithmicx}%
+% 定义本论文相关元信息
+\theoremstyle{definition} % 样式为定义
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\def\thesisChineseBookName{基于xxx算法研究}
+\def\thesisEnglishBookName{Research on xxx}
+
+\title{\thesisChineseBookName}{\thesisEnglishBookName}
+
+
+\SetKwInOut{KIN}{输入}
+\SetKwInOut{KOUT}{输出}
+
+\begin{document}
+% 插入封面
+\thesisTitlePage
+% 插入声明页
+% \thesisDeclarationPage
+
+% 中文摘要及关键词
+\begin{chineseAbstract}
+
+\chinesekeyword{分类；}
+%\let
+%\cleardoublepage
+%\clearpage
+\end{chineseAbstract}
+
+% 英文摘要及关键词
+\begin{englishAbstract}
+
+\end{englishAbstract}
+\let\cleardoublepage\clearpage
+%% 目录
+\thesisContents
+%% 主要符号对照表
+%\begin{thesisMainSymbol}
+%    $\mathbb{R}^d$        & $d$维Euclidean空间        \\
+%    $n$                    & 输入样本个数               \\
+%    $\mathbf{X}$           & 输入特征矩阵               \\
+%    $\mathbf{x}_i$         & 第$i$个样本的特征向量      \\
+%\end{thesisMainSymbol}
+%
+%%% 缩略词表
+%\begin{thesisAcronyms}
+%    GNNs & Graph Neural Networks         & 图神经网络    \\
+%    GCN  & Graph Convolution Network     & 图卷积网络    \\
+%\end{thesisAcronyms}
+%############第一章##############
+\chapter{绪论}
+\let\cleardoublepage\clearpage
+\label{chapter_introduction}
+\renewcommand{\headrulewidth}{0.4pt} % 在目录、符号表、缩略词表中去掉页眉下划线，这边需要恢复
+%图片用\ref{XXX}引用
+% \begin{figure}[!t]
+%     \centering
+%     \includegraphics[width=16.5cm]{XXX.pdf}
+%     \caption{XXXXXX}
+%     \label{chapter_sgae_fig_overview}
+% \end{figure}
+
+
+%############第二章##############
+\chapter{相关定义与工作}
+
+
+%############第三章##############
+\chapter{第三章}
+
+%############第四章##############
+\chapter{第四章}
+
+%############第五章##############
+\chapter{第五章}
+
+% 由于结论章节不能出现序号，这边重新定义一个命令
+\thesisChapterConclusion
+\chapter{}
+
+\section{全文总结}
+
+
+\section{后续工作展望}
+
+% 参考文献                                    
+\thesisbibliography{reference}
+
+
+% 致谢
+%\begin{thesisAcknowledgement}
+% 致谢
+%\end{thesisAcknowledgement}
+
+% 附录
+%\thesisappendix
+%\chapter{说明}
+%附录是对于一些不宜放在正文中，但有参考价值的内容，可以包括正文内不便列出的冗长公式推导，以备他人阅读方便所需的辅助性数学工具或表格，重复性数据图表，计算程序及说明。（如果没有附录可删除此章，导航窗格中鼠标右键章节标题有直接删除的菜单项） 
+%\section{测试}
+
+% 简历
+%\begin{thesisResume}
+%    \begin{description}[labelsep=0pt, leftmargin=*]
+%        \item 姓\hspace{24pt}名：XXX
+%        \item 性\hspace{24pt}别：女
+%        \item 出生年月：
+%    \end{description}
+%
+%    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 学习经历}
+%    \begin{description}[labelsep=0pt, leftmargin=*]
+%    	\item 研究生：计算机软件与理论，福州大学，2021.09-2024.03
+%        \item 学士：计算机软件与理论，福州大学，2017.09-2021.06
+%    \end{description}
+%
+%    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 获奖情况}
+%    \begin{description}[labelsep=0pt, leftmargin=*]
+%        \item 2023年xxx奖学金
+%    \end{description}
+%\end{thesisResume}
+
+% 在学期间的研究成果及发表的学术论文
+%\begin{thesisAccomplish}
+%    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 在学期间发表或在审论文：} 
+%    \hspace{-26pt} 第一作者 (1篇)
+%    \begin{enumerate}[labelindent=0pt, leftmargin=*]
+%        \item // 
+    
+%    \end{enumerate}
+%    共同作者（1篇）
+%    \begin{enumerate}[labelindent=0pt, leftmargin=*]
+%        \item XXXXX[C]//Chinese Conference on Pattern Recognition and Computer Vision, 2021.
+%    \end{enumerate}
+
+%    \section*{\heiti\fontsize{14pt}{16.8pt}\selectfont 在学期间参与的科研项目：} 
+%        \begin{enumerate}[labelindent=0pt, leftmargin=*]
+%		\item xxx项目(基金号)，2023.01-2026.12，参与
+%    \end{enumerate}
+%\end{thesisAccomplish}
+
+\end{document}
